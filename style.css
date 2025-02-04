@@ -1,0 +1,64 @@
+:root{
+    --cor-hover: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+.menu{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: end;
+    gap: 18px;
+    padding: 16px;
+}
+
+.menu a{
+    padding: 8px;
+    transition: .5s;
+}
+
+.menu a:hover{
+    background-color: var(--cor-hover);
+}
+
+.menu img{
+    height: 20px;
+}
+
+main{
+    padding: 50px;
+    
+}
+.card {
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+    width: 12vw;
+    height: 35vh;
+    justify-content: center;
+}
+.card img{
+    width: 11.98vw;
+}
+.card h2{
+    padding: 10px;
+    font-size: 30px;
+}
+.card p{
+    padding: 10px;
+    font-size: 12px;
+}
+
