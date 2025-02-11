@@ -28,7 +28,7 @@ function criarItemMenu(disciplinas){
 }
 
 
-const card=[
+/*const card=[
     {img: 'friends.webp', title: 'Friends', desc: 'Seis jovens são unidos por laços familiares, românticos e, principalmente, de amizade, enquanto tentam vingar em Nova York.' , streaming: 'MAX', likes: '5989' },
     {img: 'i274416.jpeg', title: 'Legends Of Tomorrow', desc: '' , streaming: 'Netflix', likes: '' },
     {img: 'julie-and-the-phantoms (1).jpg', title: 'Julie and The Phantoms', desc: '' , streaming: 'Netflix', likes: '' },
@@ -37,21 +37,62 @@ const card=[
 ]
 
 function criarCards(filmes){
-    const cardsFilmes=document.getElementById('card')
-    const novoFilme=document.createElement('div')
+    const card=document.createElement('div')
     const imagemFilme=document.createElement('img')
     const titulo=document.createElement('h2')
     const descricao=document.createElement('p')
 
-    imagemFilme.src=`./img/${filmes.img}`
-    novoFilme.textContent=filmes.titulo
-    novoFilme.textContent=filmes.descricao
+    card.appendChild(imagemFilme)
+    card.appendChild(titulo)
+    card.appendChild(descricao)
 
-    novo
+    document.body.appendChild(novoFilme)  
+}*/
 
+const filmes = [
+    {img: './img/friends.webp', title: 'Friends', desc: 'Seis jovens são unidos por laços familiares, românticos e, principalmente, de amizade, enquanto tentam vingar em Nova York.', streaming: 'MAX', likes: '5989' },
+    {img: './img/i274416.jpeg', title: 'Legends Of Tomorrow', desc: 'Descrição da série Legends Of Tomorrow.', streaming: 'Netflix', likes: '4000' },
+    {img: './img/julie-and-the-phantoms (1).jpg', title: 'Julie and The Phantoms', desc: 'Uma série musical sobre uma jovem que encontra uma banda fantasma.', streaming: 'Netflix', likes: '3000' },
+    {img: './img/GettyImages-176560285-1.webp', title: 'That 70`s Show', desc: 'Eric Forman, Donna Pinciotti, Fez, Michael Kelso, Jackie Burkhart e Steven Hyde formam um grupo de jovens que vivem em Wisconsin, nos anos 70.', streaming: 'Prime Video', likes: '1500' },
+    {img: './img/Design-sem-nome-16-1-scaled.jpg', title: 'Game Of Thrones', desc: 'A história gira em torno de uma batalha entre os Sete Reinos, onde duas famílias dominantes estão lutando pelo controle do Trono de Ferro, cuja posse possivelmente assegurará a sobrevivência durante o inverno que está por vir.', streaming: 'MAX', likes: '2200' },
+];
+
+function criarCards(filmes){
+    filmes.forEach(filme => {
+        const card = document.createElement('div');
+        card.classList.add('card') // Adiciona a classe 'card' para estilização
+
+        const imagemFilme = document.createElement('img')
+        imagemFilme.src = filme.img;
+
+        const titulo = document.createElement('h2')
+        titulo.textContent = filme.title;
+
+        const descricao = document.createElement('p')
+        descricao.textContent = filme.desc;
+
+        const streaming = document.createElement('p')
+        streaming.textContent = `Streaming: ${filme.streaming}`
+
+        const likes = document.createElement('p');
+        likes.textContent = `Likes: ${filme.likes}`
+
+        // Adicionando os elementos ao card
+        card.appendChild(imagemFilme)
+        card.appendChild(titulo)
+        card.appendChild(descricao)
+        card.appendChild(streaming)
+        card.appendChild(likes)
+
+        // Adicionando o card à página
+        document.body.appendChild(card)
+    })
 }
 
+// Chamando a função para criar os cards
+criarCards(filmes);
+
+
 disciplinas.forEach(criarItemMenu)
-card.forEach(criarCards)
 criarItemMenu()
 criarCards()
