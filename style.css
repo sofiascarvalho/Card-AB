@@ -5,7 +5,6 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 a{
@@ -16,6 +15,8 @@ a{
 ul,ol,li{
     list-style: none;
 }
+
+
 
 .menu{
     background-color: black;
@@ -39,41 +40,22 @@ ul,ol,li{
     height: 20px;
 }
 
-/*main{
+#card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    gap: 20px;
+}
+
+main{
     padding: 50px;
+    display: flex;
     
 }
-.card {
-    background-color: rgb(179, 179, 179);
-    border-radius: 10px;
-    width: 12vw;
-    height: 35vh;
-    justify-content: center;
-}
-.card img{
-    width: 11.98vw;
-}
-.card h2{
-    padding: 10px;
-    font-size: 30px;
-}
-.card p{
-    padding: 10px;
-    font-size: 12px;
-}*/
 
 
-
-
-/* Estilo para o container dos cards */
-#card {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-/* Estilo para o card individual */
 .card {
     background-color: rgb(179, 179, 179);
     border-radius: 10px;
@@ -81,20 +63,18 @@ ul,ol,li{
     height: auto;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease-in-out;
-    display: flex;
-    flex-direction:column;
     justify-content: center;
-    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
 }
 
-/* Efeito de hover para dar interatividade aos cards */
+
+
 .card:hover {
     transform: scale(1.05);
+    transition: 0.8s;
 }
 
-/* Estilo para a imagem do filme */
+
 .card img {
     width: 100%;
     height: auto;
@@ -102,7 +82,7 @@ ul,ol,li{
     margin-bottom: 10px;
 }
 
-/* Estilo para o título (h2) */
+
 .card h2 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -110,17 +90,24 @@ ul,ol,li{
     color: #333;
 }
 
-/* Estilo para a descrição do filme (p) */
+
 .card p {
     font-size: 14px;
     margin-bottom: 10px;
     color: #555;
 }
 
-/* Estilo específico para a linha de Streaming */
+
 .card p:nth-of-type(2) {
     font-weight: bold;
     color: #ff6347;
+}
+
+
+.card p:nth-of-type(3) {
+    font-size: 16px;
+    color: #444;
+    font-weight: normal;
 }
 
 

@@ -51,16 +51,17 @@ function criarCards(filmes){
 
 const filmes = [
     {img: './img/friends.webp', title: 'Friends', desc: 'Seis jovens são unidos por laços familiares, românticos e, principalmente, de amizade, enquanto tentam vingar em Nova York.', streaming: 'MAX', likes: '5989' },
-    {img: './img/i274416.jpeg', title: 'Legends Of Tomorrow', desc: 'Descrição da série Legends Of Tomorrow.', streaming: 'Netflix', likes: '4000' },
-    {img: './img/julie-and-the-phantoms (1).jpg', title: 'Julie and The Phantoms', desc: 'Uma série musical sobre uma jovem que encontra uma banda fantasma.', streaming: 'Netflix', likes: '3000' },
+    {img: './img/i274416.jpeg', title: 'Legends Of Tomorrow', desc: 'Rip Hunter, o viajante do tempo, recebe a tarefa de reunir um disforme grupo de heróis e vilões para confrontar uma ameaça difícil de parar; uma que não ameaça somente a integridade do planeta, mas do próprio tempo como uma entidade.', streaming: 'Netflix', likes: '4000' },
+    {img: './img/julie-and-the-phantoms (1).jpg', title: 'Julie and The Phantoms', desc: 'A trama gira em torno da adolescente Julie, que reencontra sua paixão pela música e pela vida enquanto ajuda os "Phantoms" - um trio de fantasmas adolescentes - a se tornarem a banda que eles nunca conseguiram ser em vida.', streaming: 'Netflix', likes: '3000' },
     {img: './img/GettyImages-176560285-1.webp', title: 'That 70`s Show', desc: 'Eric Forman, Donna Pinciotti, Fez, Michael Kelso, Jackie Burkhart e Steven Hyde formam um grupo de jovens que vivem em Wisconsin, nos anos 70.', streaming: 'Prime Video', likes: '1500' },
     {img: './img/Design-sem-nome-16-1-scaled.jpg', title: 'Game Of Thrones', desc: 'A história gira em torno de uma batalha entre os Sete Reinos, onde duas famílias dominantes estão lutando pelo controle do Trono de Ferro, cuja posse possivelmente assegurará a sobrevivência durante o inverno que está por vir.', streaming: 'MAX', likes: '2200' },
 ];
 
 function criarCards(filmes){
     filmes.forEach(filme => {
+        const main=document.querySelector('main')
         const card = document.createElement('div');
-        card.classList.add('card') // Adiciona a classe 'card' para estilização
+        card.classList.add('card') 
 
         const imagemFilme = document.createElement('img')
         imagemFilme.src = filme.img;
@@ -84,15 +85,11 @@ function criarCards(filmes){
         card.appendChild(streaming)
         card.appendChild(likes)
 
-        // Adicionando o card à página
-        document.body.appendChild(card)
+        main.appendChild(card)
     })
 }
 
-// Chamando a função para criar os cards
+disciplinas.forEach(criarItemMenu)
+
 criarCards(filmes);
 
-
-disciplinas.forEach(criarItemMenu)
-criarItemMenu()
-criarCards()
